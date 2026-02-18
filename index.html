@@ -1,88 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Anmol | Portfolio</title>
+<meta charset="UTF-8">
+<title>Anmol | Developer</title>
 <link rel="stylesheet" href="style.css">
-
-<!-- Google font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-<h1 class="logo">Anmol.dev</h1>
+<div class="bg"></div>
+
+<header class="navbar">
+<h2 class="logo">ANMOL</h2>
 <nav>
-<a href="index.html">Home</a>
+<a href="#">Home</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
-    <div class="hero-text">
-        <h2>Hello 👋</h2>
-        <h1>I am Anmol</h1>
-        <h3><span id="typing"></span></h3>
 
-        <div class="buttons">
-            <a href="contact.html" class="btn">Hire Me</a>
-            <a href="about.html" class="btn outline">My Skills</a>
-        </div>
-    </div>
+<div class="intro">
+<h3>WELCOME TO MY PORTFOLIO</h3>
+<h1>I am <span>Anmol</span></h1>
+<h2 id="typing"></h2>
 
-    <div class="hero-img">
-        <img src="photo.jpg">
-    </div>
-</section>
+<p>I design and build modern websites and continuously improve my programming skills.</p>
 
-<!-- SKILLS SECTION -->
-<section class="skills">
-<h2>What I Do</h2>
-
-<div class="cards">
-    <div class="card2">
-        <h3>Web Development</h3>
-        <p>Create responsive websites using HTML & CSS</p>
-    </div>
-
-    <div class="card2">
-        <h3>Programming</h3>
-        <p>Java, Python and C problem solving</p>
-    </div>
-
-    <div class="card2">
-        <h3>Learning DSA</h3>
-        <p>Improving logic & coding skills</p>
-    </div>
+<div class="socials">
+<a href="#">Instagram</a>
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
 </div>
+
+</div>
+
+<div class="profile-card">
+<img src="photo.jpg">
+<div class="glow"></div>
+</div>
+
 </section>
 
-<!-- typing effect -->
 <script>
-const text = ["B.Tech CSE Student", "Web Developer", "Future Software Engineer"];
-let i=0,j=0,current="",isDeleting=false;
+const roles=["Web Developer","CSE Student","Future Software Engineer","Tech Learner"];
+let i=0,j=0,current="",del=false;
 
 function type(){
-    current=text[i];
-    document.getElementById("typing").textContent=current.substring(0,j);
+current=roles[i];
+document.getElementById("typing").innerHTML=current.substring(0,j);
 
-    if(!isDeleting && j<current.length){j++;}
-    else if(isDeleting && j>0){j--;}
+if(!del && j<current.length) j++;
+else if(del && j>0) j--;
 
-    if(j==current.length){isDeleting=true;setTimeout(type,1000);return;}
-    if(j==0){isDeleting=false;i=(i+1)%text.length;}
+if(j==current.length){del=true;setTimeout(type,1000);return;}
+if(j==0){del=false;i=(i+1)%roles.length;}
 
-    setTimeout(type,isDeleting?40:80);
+setTimeout(type,del?40:80);
 }
 type();
 </script>
 
 </body>
 </html>
-</div>
 
-</body>
 
-</html>
