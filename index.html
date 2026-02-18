@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Portfolio</title>
+<title>Anmol | Portfolio</title>
 <link rel="stylesheet" href="style.css">
+
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-<h1>My Portfolio</h1>
+<h1 class="logo">Anmol.dev</h1>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -15,14 +19,70 @@
 </nav>
 </header>
 
-<div class="container">
-<h2>Hello, I am Anmol</h2>
-<img src="photo.jpg">
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Hello 👋</h2>
+        <h1>I am Anmol</h1>
+        <h3><span id="typing"></span></h3>
 
-<div class="card">
-<p>I am a B.Tech CSE DS student passionate about Web Development.</p>
+        <div class="buttons">
+            <a href="contact.html" class="btn">Hire Me</a>
+            <a href="about.html" class="btn outline">My Skills</a>
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="photo.jpg">
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills">
+<h2>What I Do</h2>
+
+<div class="cards">
+    <div class="card2">
+        <h3>Web Development</h3>
+        <p>Create responsive websites using HTML & CSS</p>
+    </div>
+
+    <div class="card2">
+        <h3>Programming</h3>
+        <p>Java, Python and C problem solving</p>
+    </div>
+
+    <div class="card2">
+        <h3>Learning DSA</h3>
+        <p>Improving logic & coding skills</p>
+    </div>
 </div>
+</section>
+
+<!-- typing effect -->
+<script>
+const text = ["B.Tech CSE Student", "Web Developer", "Future Software Engineer"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+    current=text[i];
+    document.getElementById("typing").textContent=current.substring(0,j);
+
+    if(!isDeleting && j<current.length){j++;}
+    else if(isDeleting && j>0){j--;}
+
+    if(j==current.length){isDeleting=true;setTimeout(type,1000);return;}
+    if(j==0){isDeleting=false;i=(i+1)%text.length;}
+
+    setTimeout(type,isDeleting?40:80);
+}
+type();
+</script>
+
+</body>
+</html>
 </div>
 
 </body>
+
 </html>
