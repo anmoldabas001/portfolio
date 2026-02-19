@@ -8,7 +8,7 @@
 <body>
 
 <header class="navbar">
-<h2 class="logo">Anmol</h2>
+<h2 class="logo">Portfolio</h2>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -19,13 +19,26 @@
 <section class="hero">
 <div class="content">
 <h4>HELLO, I'M</h4>
-<h1>Anmol <span>Abas</span></h1>
-<p id="typing">Web Developer</p>
+<h1>Anmol <span>Dabas</span></h1>
+<p id="typing"></p>
 
 <a href="about.html" class="btn">About Me</a>
 <a href="contact.html" class="btn outline">Contact</a>
 </div>
 </section>
+
+<script>
+const text = "Web Developer";
+let i = 0;
+function type(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(type,100);
+}
+}
+type();
+</script>
 
 </body>
 </html>
