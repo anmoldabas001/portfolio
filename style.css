@@ -210,3 +210,11 @@ text-align:center;
 }
 
 }
+.inner-hero{
+display:none;
+}
+.about-section,
+.contact-section{
+margin-top:50px;
+}
+
