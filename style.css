@@ -10,6 +10,11 @@ background:black;
 color:white;
 }
 
+/* LIGHT BLUE COLOR */
+:root{
+--main-color:#7FDBFF;
+}
+
 /* NAVBAR */
 .navbar{
 position:absolute;
@@ -18,13 +23,13 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:25px 80px;
-z-index:10;
 }
 
 .logo{
-font-size:24px;
+font-size:26px;
 font-weight:700;
-color:#7CFC00;
+color:var(--main-color);
+letter-spacing:2px;
 }
 
 .navbar nav a{
@@ -35,10 +40,10 @@ transition:0.3s;
 }
 
 .navbar nav a:hover{
-color:#7CFC00;
+color:var(--main-color);
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -47,18 +52,14 @@ padding-left:100px;
 
 background:
 linear-gradient(to right,
-rgba(0,0,0,0.98) 30%,
-rgba(0,0,0,0.85) 50%,
-rgba(0,0,0,0.4) 70%,
-rgba(0,0,0,0) 90%
+rgba(0,0,0,0.95),
+rgba(0,0,0,0.6)
 ),
-url("photo.jpg") right center/contain no-repeat,
-black;
+url("photo.jpg") right center/contain no-repeat;
 }
 
-/* TEXT */
 .content h4{
-color:#7CFC00;
+color:var(--main-color);
 letter-spacing:3px;
 margin-bottom:10px;
 }
@@ -69,12 +70,13 @@ margin-bottom:10px;
 }
 
 .content span{
-color:#7CFC00;
+color:var(--main-color);
 }
 
 #typing{
 font-size:22px;
 margin-bottom:30px;
+color:var(--main-color);
 }
 
 /* BUTTONS */
@@ -82,7 +84,7 @@ margin-bottom:30px;
 display:inline-block;
 padding:14px 32px;
 margin-right:20px;
-background:#7CFC00;
+background:var(--main-color);
 color:black;
 text-decoration:none;
 border-radius:5px;
@@ -90,8 +92,8 @@ border-radius:5px;
 
 .outline{
 background:transparent;
-border:2px solid #7CFC00;
-color:#7CFC00;
+border:2px solid var(--main-color);
+color:var(--main-color);
 }
 
 /* ABOUT */
@@ -108,8 +110,7 @@ flex-wrap:wrap;
 width:300px;
 height:auto;
 border-radius:10px;
-object-fit:contain;
-box-shadow:0 0 20px rgba(124,252,0,0.4);
+box-shadow:0 0 20px var(--main-color);
 }
 
 .about-right{
@@ -120,7 +121,7 @@ max-width:500px;
 margin-top:20px;
 background:rgba(255,255,255,0.05);
 padding:20px;
-border-left:4px solid #7CFC00;
+border-left:4px solid var(--main-color);
 }
 
 /* CONTACT */
@@ -136,4 +137,18 @@ background:rgba(255,255,255,0.05);
 padding:40px;
 border-radius:10px;
 text-align:center;
+width:350px;
+}
+
+.contact-title{
+color:var(--main-color);
+margin-bottom:20px;
+}
+
+.contact-box{
+background:rgba(255,255,255,0.08);
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid var(--main-color);
 }
