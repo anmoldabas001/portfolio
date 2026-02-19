@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Portfolio</title>
+<title>My Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
-<h2 class="logo">Anmol</h2>
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<h1>My Portfolio</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
-</header>
 
-<section class="hero hidden">
-<div class="content">
-<h4>HELLO, I'M</h4>
-<h1>Anmol <span>Abas</span></h1>
-<p id="typing">Web Developer</p>
-
-<a href="about.html" class="btn">About Me</a>
-<a href="contact.html" class="btn outline">Contact</a>
+<div class="inner-hero">
+<div>
+<h2>Hello, I'm a Web Developer</h2>
+<p>I create modern websites</p>
 </div>
-</section>
+</div>
 
-<script>
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach((entry)=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el)=>observer.observe(el));
-</script>
+<footer>
+<p>© 2026 My Portfolio</p>
+</footer>
 
 </body>
 </html>
