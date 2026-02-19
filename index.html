@@ -2,19 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Anmol | Developer</title>
+<title>Anmol | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="bg"></div>
-
 <header class="navbar">
-<h2 class="logo">ANMOL</h2>
+<div class="logo">Portfolio</div>
 <nav>
-<a href="#">Home</a>
+<a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </nav>
@@ -22,30 +20,21 @@
 
 <section class="hero">
 
-<div class="intro">
-<h3>WELCOME TO MY PORTFOLIO</h3>
-<h1>I am <span>Anmol</span></h1>
-<h2 id="typing"></h2>
+<div class="content">
+    <h4>WHO YOU ARE</h4>
+    <h1>Hi, I am <span>Anmol</span></h1>
+    <h3 id="typing"></h3>
 
-<p>I design and build modern websites and continuously improve my programming skills.</p>
-
-<div class="socials">
-<a href="#">Instagram</a>
-<a href="#">LinkedIn</a>
-<a href="#">GitHub</a>
-</div>
-
-</div>
-
-<div class="profile-card">
-<img src="photo.jpg">
-<div class="glow"></div>
+    <div class="buttons">
+        <a href="about.html" class="btn">Show Profile</a>
+        <a href="contact.html" class="btn outline">Know More</a>
+    </div>
 </div>
 
 </section>
 
 <script>
-const roles=["Web Developer","CSE Student","Future Software Engineer","Tech Learner"];
+const roles=["B.Tech CSE Student","Web Developer","Future Software Engineer"];
 let i=0,j=0,current="",del=false;
 
 function type(){
@@ -65,5 +54,3 @@ type();
 
 </body>
 </html>
-
-
