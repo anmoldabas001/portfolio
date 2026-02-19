@@ -7,37 +7,31 @@
 
 <body>
 
-<header class="navbar">
-<h2 class="logo">Anmol</h2>
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<h1>My Portfolio</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
-</header>
 
-<section class="contact-section hidden">
+<section class="contact">
 
-<div class="contact-card">
 <h2>Contact Me</h2>
-<p>Email: example@gmail.com</p>
-<p>Phone: 1234567890</p>
-</div>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5"></textarea>
+<button type="submit">Send</button>
+</form>
 
 </section>
 
-<script>
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach((entry)=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el)=>observer.observe(el));
-</script>
+<footer>
+<p>© 2026 My Portfolio</p>
+</footer>
 
 </body>
 </html>
