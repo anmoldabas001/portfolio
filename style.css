@@ -108,3 +108,71 @@ color:#7CFC00;
 background:#7CFC00;
 color:black;
 }
+/* INNER PAGE HERO */
+.inner-hero{
+height:40vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:
+linear-gradient(to right,
+rgba(0,0,0,0.9),
+rgba(0,0,0,0.6)
+),
+url("photo.jpg") center/cover no-repeat;
+}
+
+.inner-hero h1{
+font-size:50px;
+color:#7CFC00;
+}
+
+/* ABOUT PAGE */
+.about-section{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:80px;
+background:black;
+color:white;
+}
+
+.about-left img{
+width:300px;
+border-radius:10px;
+box-shadow:0 0 25px rgba(124,252,0,0.4);
+}
+
+.about-right{
+max-width:500px;
+}
+
+.info-box{
+margin-top:20px;
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-left:4px solid #7CFC00;
+}
+
+/* CONTACT PAGE */
+.contact-section{
+display:flex;
+justify-content:center;
+align-items:center;
+height:60vh;
+background:black;
+}
+
+.contact-card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:10px;
+box-shadow:0 0 25px rgba(124,252,0,0.3);
+text-align:center;
+}
+
+.contact-card h2{
+color:#7CFC00;
+margin-bottom:20px;
+}
