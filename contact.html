@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Contact | Anmol</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>Contact</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="navbar">
-<div class="logo">Portfolio</div>
+<h2 class="logo">Anmol</h2>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -18,20 +16,28 @@
 </nav>
 </header>
 
-<section class="inner-hero">
-<h1>Contact Me</h1>
-</section>
-
-<section class="contact-section">
+<section class="contact-section hidden">
 
 <div class="contact-card">
-<h2>Get In Touch</h2>
-<p>Email: yourmail@gmail.com</p>
-<p>Phone: 9999999999</p>
-<p>Location: Your City</p>
+<h2>Contact Me</h2>
+<p>Email: example@gmail.com</p>
+<p>Phone: 1234567890</p>
 </div>
 
 </section>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach((entry)=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el)=>observer.observe(el));
+</script>
 
 </body>
 </html>
